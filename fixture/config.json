@@ -1,0 +1,7 @@
+{
+ "network" : "testnet",
+ "neededSignatures" : 1,
+ "masterPubkeys" : [
+  ""
+ ]
+}

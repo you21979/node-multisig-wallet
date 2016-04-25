@@ -5,6 +5,7 @@
   "private": false,
   "dependencies": {
     "bitcoinjs-lib" : "2.2.*",
+    "bip39" : "2.2.*",
     "bitcoin-util-fee" : "git://github.com/you21979/node-bitcoin-util-fee.git"
   },
   "readmeFilename": "README.md",
