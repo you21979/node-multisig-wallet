@@ -1,0 +1,30 @@
+{
+  "author": "Yuki Akiyama",
+  "name": "multisig-wallet",
+  "version": "0.0.1",
+  "private": false,
+  "dependencies": {
+    "bitcoinjs-lib" : "2.2.*",
+    "bitcoin-util-fee" : "git://github.com/you21979/node-bitcoin-util-fee.git"
+  },
+  "readmeFilename": "README.md",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+  },
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/you21979/node-multisig-wallet.git"
+  },
+  "keywords": [
+    "bitcoin",
+    "multisig"
+  ],
+  "bugs": {
+    "url": "https://github.com/you21979/node-multisig-wallet/issues"
+  },
+  "license": "MIT"
+}
