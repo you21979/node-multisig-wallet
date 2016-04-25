@@ -1,1 +1,3 @@
-module.exports = require('./lib/multisig_wallet');
+exports.HDWallet = require('./lib/hdwallet');
+exports.TXBuilder = require('./lib/txbuilder');
+exports.networks = require('./lib/networks');
