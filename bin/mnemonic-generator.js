@@ -8,11 +8,6 @@ var param = {
 }
 
 var mnemonic = bip39.generateMnemonic(param.ent);
-var password = undefined;
-var masterseed = bip39.mnemonicToSeed(mnemonic, password);
-var hdnode = bitcoin.HDNode.fromSeedBuffer(masterseed, param.network);
-var masterprv = hdnode.toString();
 
 console.log(mnemonic)
-console.log(masterprv)
 
