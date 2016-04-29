@@ -4,16 +4,21 @@ var fs = require("fs");
 
 var getopt = function(prog, argv){
     if(argv.length < 2) {
-        console.log(['usage:', 'node', prog.split('/').pop(), 'BIP32_PATH', 'CONFIG_FILE'].join(' '));
+        console.log([
+            'usage:',
+            'node',
+            prog.split('/').pop(),
+            'CONFIG_FILE',
+            'BIP32_PATH'
+        ].join(' '));
         process.exit(0);
     }
-    var pathStr = argv[0];
-    var config = JSON.parse(fs.readFileSync(argv[1], 'utf8'));
+    var config = JSON.parse(fs.readFileSync(argv[0], 'utf8'));
+    var pathStr = argv[1];
     var network = multisigWallet.networks[config.network];
     if(config.neededSignatures <= 0) {
-        throw new Error('invalid NEEDED_SIGNATURES!');
+        throw new Error('invalid needsignatures');
     }
-
     return {
         network : network,
         pathStr : pathStr,
@@ -24,7 +29,7 @@ var getopt = function(prog, argv){
 
 var main = function(opt){
     var hdwallet = new multisigWallet.HDWallet(opt.masterPubkeys, opt.neededSignatures);
-    var wallet = hdwallet.makeWallet(opt.pathStr.split('/'));
+    var wallet = hdwallet.makeWallet(opt.pathStr);
     console.log(wallet.generateAddress(opt.network))
 }
 

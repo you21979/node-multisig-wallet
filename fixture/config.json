@@ -2,6 +2,7 @@
  "network" : "testnet",
  "neededSignatures" : 1,
  "masterPubkeys" : [
-  ""
+  "xpub6A4csPYf7MJAg5rKGD4sPUtuZcMBxtEL3ePXMXuGKcSbELFoUwfAcBp3ttTR3wmxmDKUzo9KGKEvkuVznq5C3AVbCopvEu3QcinXbSPosWx",
+  "xpub69n15qeJNvakWpppG3TWFXdjBK75rhtLsZgWzxmtmYy1HWegPfXAgKi5SGtS6SbpTRs6UjDPmsgLeqaaMUkxkXTHSogUnRdcvKu2iTVB1Ap"
  ]
 }
