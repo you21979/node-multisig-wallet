@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "private": false,
   "dependencies": {
-    "bitcoinjs-lib" : "2.2.*",
+    "bitcoinjs-lib" : "2.3.*",
     "bip39" : "2.2.*",
     "bitcoin-util-fee" : "git://github.com/you21979/node-bitcoin-util-fee.git"
   },
