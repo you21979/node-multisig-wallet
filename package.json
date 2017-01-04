@@ -6,6 +6,7 @@
   "dependencies": {
     "bitcoinjs-lib" : "2.3.*",
     "bip39" : "2.2.*",
+    "bitcoinfees-21co" : "0.0.1",
     "bitcoin-util-fee" : "git://github.com/you21979/node-bitcoin-util-fee.git"
   },
   "readmeFilename": "README.md",
