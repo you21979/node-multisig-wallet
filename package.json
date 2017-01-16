@@ -4,10 +4,11 @@
   "version": "0.0.1",
   "private": false,
   "dependencies": {
+    "commander" : "2.9.*",
     "bitcoinjs-lib" : "2.3.*",
     "bip39" : "2.2.*",
-    "bitcoinfees-21co" : "0.0.1",
-    "bitcoin-util-fee" : "git://github.com/you21979/node-bitcoin-util-fee.git"
+    "bitcoinfees-21co" : "0.0.2",
+    "bitcoin-util-fee" : "0.0.2"
   },
   "readmeFilename": "README.md",
   "description": "",
