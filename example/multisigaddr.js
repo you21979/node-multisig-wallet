@@ -29,8 +29,8 @@ var getopt = function(prog, argv){
 
 var main = function(opt){
     var hdwallet = new multisigWallet.HDWallet(opt.masterPubkeys, opt.neededSignatures);
-    var wallet = hdwallet.makeWallet(opt.pathStr);
-    console.log(wallet.generateAddress(opt.network))
+    var wallet = hdwallet.makeWallet(opt.pathStr, opt.network);
+    console.log(wallet.generateAddress())
 }
 
 main(getopt(process.argv[1], process.argv.slice(2)))
