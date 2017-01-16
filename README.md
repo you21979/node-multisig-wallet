@@ -4,6 +4,7 @@ multisig wallet
 
 # spec
 
+* bitcoinjs-lib
 * cold wallet (exclude secret key)
 * bip32 hd wallet
 * bip16 p2sh multisig wallet
