@@ -2,8 +2,10 @@
 
 multisig wallet
 
-* bitcoinjs-lib
-* BIP16 P2SH
-* BIP32 HD WALLET
-* BIP39 Mnemonic code
-* BIP43 custom specification wallet
+# spec
+
+* cold wallet (exclude secret key)
+* bip32 hd wallet
+* bip16 p2sh multisig wallet
+* bip43 Purpose Field for hdwallet
+* output rawtransaction and hdpath, redeemscript
