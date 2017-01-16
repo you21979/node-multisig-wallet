@@ -10,3 +10,8 @@ multisig wallet
 * bip16 p2sh multisig wallet
 * bip43 Purpose Field for hdwallet
 * output rawtransaction and hdpath, redeemscript
+
+# caution
+
+this source code is experimental status.
+
