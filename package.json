@@ -7,7 +7,10 @@
     "mnemonic-generator" : "./bin/mnemonic-generator"
   },
   "dependencies": {
+    "promise-util-task" : "0.0.2",
+    "@you21979/promise-sleep" : "1.0.*",
     "commander" : "2.9.*",
+    "bluebird" : "3.4.*",
     "bitcoinjs-lib" : "2.3.*",
     "bip39" : "2.2.*",
     "bitcoinfees-21co" : "0.0.2",
