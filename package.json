@@ -13,8 +13,8 @@
     "bluebird" : "3.4.*",
     "bitcoinjs-lib" : "2.3.*",
     "bip39" : "2.2.*",
-    "bitcoinfees-21co" : "0.0.2",
-    "bitcoin-util-fee" : "0.0.2"
+    "bitcoinfees-21co" : "0.0.3",
+    "bitcoin-util-fee" : "0.0.6"
   },
   "readmeFilename": "README.md",
   "description": "",
