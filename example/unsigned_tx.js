@@ -37,8 +37,12 @@ var main = function(opt){
     var hdw = new multisigWallet.HDWallet(opt.masterPubkeys, opt.neededSignatures)
     var txb = hdw.makeUnsignedTx(opt.change, opt.feesize, opt.network);
     txb.addInput(opt.txid, opt.vout, opt.value, opt.hdpath);
-    var result = txb.unsignedBuild();
-    console.log(result)
+    var res = txb.unsignedBuild();
+    var info = new multisigWallet.TXDecoder(res.result.rawtx, opt.network);
+    console.log(JSON.stringify(info.decode(), null, 2))
+    
+    
+    console.log(JSON.stringify(res, null, 2))
 }
 
 main(getopt(program))
