@@ -30,6 +30,7 @@
   },
   "keywords": [
     "bitcoin",
+    "coldwallet",
     "multisig"
   ],
   "bugs": {
