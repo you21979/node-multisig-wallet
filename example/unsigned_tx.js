@@ -1,45 +1,44 @@
 'use strict'
+var program = require('commander');
 var utilFee = require('bitcoin-util-fee');
 var multisigWallet = require("..");
 var fs = require("fs");
 
-var getopt = function(prog, argv){
-    if(argv.length < 3) {
-        console.log([
-            'usage:',
-            'node',
-            prog.split('/').pop(),
-            'CONFIG_FILE',
-            'TXID',
-            'VOUT',
-            'VALUE'
-        ].join(' '));
-        process.exit(0);
-    }
-    var config = JSON.parse(fs.readFileSync(argv[0], 'utf8'));
-    var txid = argv[1];
-    var vout = argv[2]
+program
+  .version('0.0.1')
+  .option('-c, --config <filename>', 'config file')
+  .option('-i, --txid <id>', 'txid')
+  .option('-o, --vout <vout>', 'vout')
+  .option('-v, --value <value>', 'tx value')
+  .option('-p, --path <path>', 'hdpath')
+  .option('-x, --change <hdpath>', 'change hdpath')
+  .parse(process.argv);
+
+var getopt = function(program){
+    var config = JSON.parse(fs.readFileSync(program.config, 'utf8'));
     var network = multisigWallet.networks[config.network];
     if(config.neededSignatures <= 0) {
         throw new Error('invalid needsignatures');
     }
     return {
-        txid : txid,
-        vout : vout,
-        value : value,
+        txid : program.txid,
+        vout : parseInt(program.vout),
+        value : parseInt(program.value),
+        hdpath : program.path,
+        change : program.change,
         network : network,
+        feesize : 100,
         neededSignatures : config.neededSignatures,
         masterPubkeys : config.masterPubkeys,
     }
 }
 
 var main = function(opt){
-    var address = "2MzHAs8cCdcXMjQyyZ4K6AzvHMb8SvnaGaT";
-    var input_byte = utilFee.p2sh_calc_input_byte(opt.neededSignatures, opt.masterPubkeys.length)
-    var txb = new multisigWallet.TXBuilder(address, opt.network);
-    txb.add(opt.txid, opt.vout, opt.value, input_byte);
-    var rawtx = txb.commit();
-    console.log(rawtx)
+    var hdw = new multisigWallet.HDWallet(opt.masterPubkeys, opt.neededSignatures)
+    var txb = hdw.makeUnsignedTx(opt.change, opt.feesize, opt.network);
+    txb.addInput(opt.txid, opt.vout, opt.value, opt.hdpath);
+    var result = txb.unsignedBuild();
+    console.log(result)
 }
 
-main(getopt(process.argv[1], process.argv.slice(2)))
+main(getopt(program))
