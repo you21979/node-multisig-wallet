@@ -1,6 +1,6 @@
 # node-multisig-wallet
 
-multisig wallet
+multisig wallet for bitcoin family
 
 # spec
 
