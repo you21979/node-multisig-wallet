@@ -13,13 +13,13 @@ multisig wallet
 
 # support coins
 
-Bitcoin
-Litecoin
-DASH
-Dogecoin
-Monacoin
-ZCoin
-GameCredit
+* Bitcoin
+* Litecoin
+* DASH
+* Dogecoin
+* Monacoin
+* ZCoin
+* GameCredit
 
 # caution
 
