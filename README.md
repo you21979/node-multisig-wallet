@@ -11,6 +11,16 @@ multisig wallet
 * bip43 Purpose Field for hdwallet
 * output rawtransaction and hdpath, redeemscript
 
+# support coins
+
+Bitcoin
+Litecoin
+DASH
+Dogecoin
+Monacoin
+ZCoin
+GameCredit
+
 # caution
 
 this source code is experimental status.
