@@ -33,7 +33,7 @@ var main = function(argv){
     var masterprv = argv[1]
     var xprv = derivePath(masterprv, hdpath);
     var xpub = xprv.neutered();
-    console.log(xpub.toString());
+    console.log(xpub.toBase58());
 }
 
 main(process.argv.slice(2))

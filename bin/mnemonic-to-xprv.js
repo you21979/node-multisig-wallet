@@ -26,7 +26,7 @@ var main = function(program){
     var network = program.network || "bitcoin";
     var masterseed = bip39.mnemonicToSeed(mnemonic, password);
     var hdnode = bitcoin.HDNode.fromSeedBuffer(masterseed, bitcoin.networks[network]);
-    var masterprv = hdnode.toString();
+    var masterprv = hdnode.toBase58();
     console.log(masterprv)
 }
 
