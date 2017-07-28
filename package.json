@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "private": false,
   "bin": {
-    "mnemonic-generator": "./bin/mnemonic-generator"
+    "mnemonic-generator": "./bin/mnemonic-generator.js"
   },
   "dependencies": {
     "promise-util-task": "0.0.2",
