@@ -7,14 +7,15 @@
     "mnemonic-generator": "./bin/mnemonic-generator.js"
   },
   "dependencies": {
-    "promise-util-task": "0.0.2",
     "@you21979/promise-sleep": "1.0.*",
-    "commander": "2.9.*",
-    "bluebird": "3.4.*",
-    "bitcoinjs-lib": "3.1.*",
     "bip39": "2.2.*",
+    "bip32-derive-memorizer": "0.0.1",
+    "bitcoin-util-fee": "0.0.6",
     "bitcoinfees-21co": "0.0.3",
-    "bitcoin-util-fee": "0.0.6"
+    "bitcoinjs-lib": "3.3.*",
+    "bluebird": "3.4.*",
+    "commander": "2.9.*",
+    "promise-util-task": "0.0.2"
   },
   "readmeFilename": "README.md",
   "description": "",
